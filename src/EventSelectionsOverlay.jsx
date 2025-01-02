@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SelectionSection from './SelectionSection';
-import { sectionsData } from './data';
+import { venueData } from './venueData';
+import CateringSection from './CateringSection';
+import { cateringData } from './cateringData';
 
 const EventSelectionsOverlay = ({ toggleOverlay }) => {
-  const [data, setData] = useState([]);
+  const [venueOptions, setVenueOptions] = useState([]);
+  const [cateringOptions, setCateringOptions] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Simulating fetching data using useEffect and axios
   useEffect(() => {
     // Here we are simulating fetching data from an external source
     setTimeout(() => {
-      setData(sectionsData);  // Use the imported mock data here
+      // Use the imported mock data here
+      setVenueOptions(venueData);  
+      setCateringOptions(cateringData);
       setLoading(false);
     }, 1000); // Simulate a delay to mimic a real fetch
   }, []);
@@ -29,9 +34,10 @@ const EventSelectionsOverlay = ({ toggleOverlay }) => {
           ) : (
             <>
               <h2 className="text-3xl font-semibold mb-4">Select Your Options</h2>
-              {data.map((section, index) => (
+              {venueOptions.map((section, index) => (
                 <SelectionSection key={index} header={section.header} options={section.options} />
               ))}
+              <CateringSection header="Catering Options" options={cateringOptions}/>
             </>
           )}
           <div className="flex justify-end mt-6">

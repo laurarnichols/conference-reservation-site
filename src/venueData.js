@@ -10,7 +10,7 @@ import whiteboardImg from './assets/whiteboard.png';
 import microphoneImg from './assets/microphone.jpg';
 import speakerImg from './assets/speaker.jpg';
 
-export const sectionsData = [
+export const venueData = [
   {
     header: "Venue Options",
     options: [
