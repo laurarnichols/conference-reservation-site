@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Card = ({ title, capacity, price }) => {
+const Card = ({ title, capacity, price, image }) => {
   const [count, setCount] = useState(0);
 
   const handleIncrease = () => setCount(count + 1);
@@ -8,10 +8,10 @@ const Card = ({ title, capacity, price }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img src="https://via.placeholder.com/300" alt={title} className="w-full h-48 object-cover" />
+      <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-semibold">{title}</h3>
-        <p className="text-gray-600">Capacity: {capacity}</p>
+        {capacity.trim() && <p className="text-gray-600">Capacity: {capacity}</p>}
         <p className="text-yellow-500 text-lg">Price: ${price}</p>
         <div className="flex items-center justify-between mt-4">
           <button
