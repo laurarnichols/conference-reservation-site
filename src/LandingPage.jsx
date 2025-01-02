@@ -1,7 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
 
-const LandingPage = () => {
+const LandingPage = ({toggleOverlay}) => {
   return (
     <>
         <div className="relative h-screen bg-cover bg-center bg-people">
@@ -11,7 +11,7 @@ const LandingPage = () => {
                 <div className="flex flex-col items-center justify-center text-center text-white space-y-4 w-1/3 h-2/3">
                     <h1 className="text-4xl font-bold">Conference Reservation System</h1>
                     <p className="text-lg">Plan your next major event with us!</p>
-                    <button className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-600 transition">
+                    <button className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-600 transition" onClick={toggleOverlay}>
                     Get Started
                     </button>
                 </div>
