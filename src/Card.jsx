@@ -44,9 +44,6 @@ const Card = ({ storeKey, index }) => {
           </button>
         </div>
       </div>
-      <div className="p-4 border-t">
-        <p className="font-semibold text-lg">Total: ${count * price}</p>
-      </div>
     </div>
   );
 };

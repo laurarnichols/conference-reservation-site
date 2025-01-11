@@ -16,13 +16,13 @@ const SelectionSection = ({ storeKey }) => {
   ));
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-lg mb-6">
+    <div className="bg-gray-100 p-6 rounded-lg shadow-lg mb-6 ml-8 mr-8">
       <h2 className="text-2xl font-semibold mb-4">{header}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {cards}
       </div>
       <div className="mt-4 text-right font-semibold text-lg">
-        Total: ${totalCost}
+        Subtotal: ${totalCost}
       </div>
     </div>
   );

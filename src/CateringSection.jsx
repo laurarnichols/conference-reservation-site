@@ -13,7 +13,7 @@ const CateringSection = ({ header }) => {
   });
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-lg mb-6">
+    <div className="bg-gray-100 p-6 rounded-lg shadow-lg mb-6 ml-8 mr-8">
       <h2 className="text-2xl font-semibold mb-4">{header}</h2>
       <div className="mb-4">
         <label
@@ -61,7 +61,7 @@ const CateringSection = ({ header }) => {
         ))}
       </div>
       <div className="mt-4 text-right font-semibold text-lg">
-        Total: ${totalCost}
+        Subtotal: ${totalCost}
       </div>
     </div>
   );

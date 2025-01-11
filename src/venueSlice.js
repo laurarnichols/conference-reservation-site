@@ -20,6 +20,7 @@ export const venueSlice = createSlice({
           return;
         }
         state[storeKey].options[index].count++;
+        state[storeKey].totalCost += state[storeKey].options[index].price;
       }
     },
     decrementVenueCount: (state, action) => {
@@ -29,6 +30,7 @@ export const venueSlice = createSlice({
           return;
         }
         state[storeKey].options[index].count--;
+        state[storeKey].totalCost -= state[storeKey].options[index].price;
       }
     },
   },
