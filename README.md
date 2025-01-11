@@ -22,7 +22,7 @@ The purpose of this site is to provide a user-friendly interface for organizing 
 
 ## Usage
 
-1. Open your browser and navigate to `http://localhost:3000`.
+1. Open your browser and navigate to https://laurarnichols.github.io/conference-reservation-site/.
 2. Select your desired options for the conference.
 3. View the total cost and detailed breakdown of your selections.
 4. Click "Show Details" to see a detailed table of your selections and costs.
