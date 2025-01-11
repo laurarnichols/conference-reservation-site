@@ -23,13 +23,6 @@ const EventSelectionsOverlay = ({ toggleOverlay }) => {
     }
   }, [showDetails]);
 
-  const handleShowDetails = () => {
-    setShowDetails(!showDetails);
-    if (!showDetails) {
-      detailsRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="relative">
       {/* Full screen semi-transparent background */}
@@ -52,7 +45,7 @@ const EventSelectionsOverlay = ({ toggleOverlay }) => {
                 {cateringCost + venueLocations.totalCost + avOptions.totalCost}
               </div>
               <button
-                onClick={handleShowDetails}
+                onClick={() => setShowDetails(!showDetails)}
                 className="text-blue-600 underline ml-4"
               >
                 {showDetails ? "Hide Details" : "Show Details"}
